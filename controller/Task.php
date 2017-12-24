@@ -47,7 +47,11 @@ class Task extends \core\Controller{
 
         $models = ModelTask::findAll($sort);
         $pageModel = Paginator::getPages($models,3);
-        $countPages = max($pageModel);
+        if (count($pageModel)>0){
+            $countPages = max($pageModel);
+        }else{
+            $countPages = 0;
+        }
         $this->render('index',[
             'models' => $models,
             'mistake' => $mistake,
