@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a755d940-8289-4013-adf7-13d85f2933c6" name="Default" comment="bj 0.02">
+    <list default="true" id="a755d940-8289-4013-adf7-13d85f2933c6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.php" afterPath="$PROJECT_DIR$/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/Task.php" afterPath="$PROJECT_DIR$/controller/Task.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/task/login.php" afterPath="$PROJECT_DIR$/view/task/login.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -303,7 +300,7 @@
       <workItem from="1514073806113" duration="88000" />
       <workItem from="1514099854004" duration="5541000" />
       <workItem from="1514106002416" duration="9206000" />
-      <workItem from="1514136289830" duration="658000" />
+      <workItem from="1514136289830" duration="674000" />
     </task>
     <task id="LOCAL-00001" summary="bj 0.02">
       <created>1514073827543</created>
@@ -340,11 +337,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514115668591</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="MVC 0.02">
+      <created>1514136959223</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1514136959223</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112952000" />
+    <option name="totallyTimeSpent" value="112968000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -382,7 +386,8 @@
     <MESSAGE value="bj 0.05" />
     <MESSAGE value="bj 0.06" />
     <MESSAGE value="bj 0.07" />
-    <option name="LAST_COMMIT_MESSAGE" value="bj 0.07" />
+    <MESSAGE value="MVC 0.02" />
+    <option name="LAST_COMMIT_MESSAGE" value="MVC 0.02" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
