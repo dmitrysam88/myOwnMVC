@@ -12,6 +12,7 @@
     <div class="col-lg-1"></div>
     <div class="col-lg-3">
         <a href="/task/index/" class="btn btn-info">На главную</a><br><br>
+        <p class="text-danger"><?=$mistake?></p><br>
         <form action="" method="post">
             <label class="control-label">Логин</label><br>
             <input type="text" name="login" class="form-control"><br>

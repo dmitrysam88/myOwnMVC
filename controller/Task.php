@@ -51,7 +51,7 @@ class Task extends \core\Controller{
         $this->render('index',[
             'models' => $models,
             'mistake' => $mistake,
-            'isAdmin'=>(isset($_SESSION['user'])&&$_SESSION['user']=="admin"),
+            'isAdmin'=>(isset($_SESSION['user'])&&$_SESSION['user']==admin_login),
             'countPages' => $countPages,
             'pageModel' => $pageModel,
             'nowPage' => $nowPage,
@@ -60,13 +60,16 @@ class Task extends \core\Controller{
     }
 
     public function login(){
-        if (count($_POST)>0 && $_POST['login'] == "admin" && $_POST['password'] == "123"){
+        $mistake = "";
+        if (count($_POST)>0 && $_POST['login'] == admin_login && $_POST['password'] == admin_password){
             $_SESSION['user'] = $_POST['login'];
+        }elseif (isset($_POST['login']) && isset($_POST['password'])){
+            $mistake = "Неверный логин или пароль";
         }
-        if ($_SESSION['user'] == "admin"){
+        if ($_SESSION['user'] == admin_login){
             Routing::redirect("task/index?page=1");
         }else{
-            $this->render('login');
+            $this->render('login',['mistake' => $mistake]);
         }
     }
 
@@ -87,7 +90,7 @@ class Task extends \core\Controller{
                 Routing::redirect("task/index?page=1");
             }
         }
-        if ($_SESSION['user'] != "admin"){
+        if ($_SESSION['user'] != admin_login){
             Routing::redirect("task/login/");
         }elseif (!ctype_digit($_GET['id'])){
             Routing::redirect("task/index?page=1");

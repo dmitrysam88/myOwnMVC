@@ -7,5 +7,7 @@ define("sql_db", "test");//Таблица базы данных
 define("sql_port", "3306");//Порт подключения
 define("title", "Сайт");//Базовый тайтл
 define("root_url", "test");//Корневая папка
-define("default_controller" ,"task")//Контроллер по умолчанию
+define("default_controller" ,"task");//Контроллер по умолчанию
+define("admin_login", "admin");//Логин админа
+define("admin_password", "123");//Пароль админа
 ?>
