@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond % !^domain\.ru$ [NC]
+RewriteRule ^(.*)$ http://test/ [L,R=301]

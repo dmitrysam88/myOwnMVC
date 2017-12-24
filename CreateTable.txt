@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS `Task` (
+  `id` int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `userName` varchar(150) DEFAULT NULL,
+  `email` varchar(150) DEFAULT NULL,
+  `text` text,
+  `image` varchar(255) DEFAULT NULL,
+  `done` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

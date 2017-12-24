@@ -1,0 +1,19 @@
+#Кодировка
+AddDefaultCharset utf-8
+
+RewriteEngine on 
+RewriteBase /
+#Запрет перенаправления если файл есть  
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d 
+#Перенаправление со страниц вида /employee/
+RewriteRule ^([A-z]*)\/$ ?type=page&controller=$1&action=index [L,QSA]
+#Обращение к контролеру
+RewriteRule ^([A-z]*)\/([A-z]*)\/$ ?type=page&controller=$1&action=$2 [L,QSA]
+#Ajax
+RewriteRule ^ajax\/([A-z]*)\/([A-z]*)\/$ ?type=ajax&controller=$1&action=$2 [L,QSA]
+#
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_URI} !\.
+RewriteRule ^(.*) %{REQUEST_URI}/ [R=301,L]
+ErrorDocument 404 /404.html

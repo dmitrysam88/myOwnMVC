@@ -1,0 +1,23 @@
+{
+    "name": "test/app",
+    "description": "lesson",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmitry",
+            "email": "dmitry.sam88@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4":{
+            "test\\":"",
+            "core\\":"core/",
+            "controller\\":"controller/",
+            "model\\":"model/",
+            "view\\":"view/"
+        }
+    }
+}
