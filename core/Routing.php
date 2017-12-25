@@ -17,7 +17,7 @@ class Routing
     static public function execute(){
         $mistake = false;
         //$type = $_REQUEST['type'];
-        $controllerName = $_REQUEST['controller'];
+        $controllerName = ucwords($_REQUEST['controller']);
         $actionName = $_REQUEST['action'];
 
         if (is_null($controllerName)){
