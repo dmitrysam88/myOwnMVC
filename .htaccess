@@ -14,6 +14,8 @@ RewriteRule ^([A-z]*)\/([A-z]*)\/$ ?type=page&controller=$1&action=$2 [L,QSA]
 #Ajax
 RewriteRule ^ajax\/([A-z]*)\/([A-z]*)\/$ ?type=ajax&controller=$1&action=$2 [L,QSA]
 #
+RewriteCond %{REQUEST_FILENAME} !favicon.ico
+
 RewriteCond %{REQUEST_URI} !/$
 RewriteCond %{REQUEST_URI} !\.
 RewriteRule ^(.*) %{REQUEST_URI}/ [R=301,L]

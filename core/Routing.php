@@ -17,7 +17,7 @@ class Routing
     static public function execute(){
         $mistake = false;
         //$type = $_REQUEST['type'];
-        $controllerName = ucwords($_REQUEST['controller']);
+        $controllerName = $_REQUEST['controller'];
         $actionName = $_REQUEST['action'];
 
         if (is_null($controllerName)){
@@ -25,7 +25,7 @@ class Routing
             return;
         }
 
-        $controllerName = "controller\\".$controllerName;
+        $controllerName = "controller\\".ucwords($controllerName);
 
         if (class_exists($controllerName)){
             $objControl = new $controllerName();
